@@ -1,0 +1,26 @@
+{
+  "name": "arthurpristupa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "watch:css": "node-sass styles/main.scss styles/app.css -w",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "next": "10.0.5",
+    "nodemon": "^2.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-image-gallery": "^1.0.8"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

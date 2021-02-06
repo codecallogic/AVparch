@@ -1,0 +1,14 @@
+// Base
+@import './base.scss';
+@import './helpers.scss';
+
+// Pages
+@import 'pageStyles/home.scss';
+@import 'pageStyles/projects.scss';
+@import 'pageStyles/artwork.scss';
+
+// Components
+@import 'components/nav.scss';
+@import 'components/slider.scss';
+@import 'components/footer.scss';
+@import 'components/projectpage.scss';

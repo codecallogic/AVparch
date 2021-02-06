@@ -1,0 +1,17 @@
+.active {
+  cursor: pointer;
+  color: white !important;
+  background-color: #333333;
+
+  &-footer {
+    cursor: pointer;
+    color: #333333 !important;
+  }
+}
+
+.white-space {
+  &-bottom-large {
+    margin-bottom: 25rem;
+    z-index: 1;
+  }
+}

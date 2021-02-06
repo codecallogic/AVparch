@@ -1,0 +1,190 @@
+.slider {
+  grid-column: 3/4;
+  grid-row: 1/1;
+  height: 25rem;
+  margin: auto;
+  position: relative;
+  display: grid;
+  width: 100% !important;
+
+  @media only screen and (max-width: $medium) {
+    grid-column: 1/-1;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: 10% 5% 70% 5% 10%;
+    align-items: center;
+  }
+
+  &-left {
+    &-track {
+      grid-column: 2/3;
+      grid-row: 1/1;
+      background-color: transparent;
+      width: 5rem;
+      height: 8rem;
+      z-index: 15;
+      margin-left: 5.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: $large) {
+        margin-left: 3rem;
+      }
+
+      @media only screen and (max-width: $medium) {
+        grid-column: 1/1;
+        margin-left: -2rem;
+      }
+    }
+
+    &-line {
+      grid-column: 1/2;
+      border-top: 0.1rem solid #aaa8a8;
+      width: 8%;
+      margin-top: -2.5rem;
+
+      @media only screen and (max-width: $medium) {
+        display: none;
+      }
+    }
+  }
+
+  &-left-track:hover ~ .slider &-track {
+    animation-play-state: running;
+  }
+
+  &-right {
+    &-line {
+      grid-column: 5/6;
+      border-top: 0.1rem solid #aaa8a8;
+      width: 100%;
+      margin-top: -2.5rem;
+      z-index: 100;
+
+      @media only screen and (max-width: $medium) {
+        display: none;
+      }
+    }
+
+    &-track {
+      grid-column: 4/5;
+      grid-row: 1/1;
+      background-color: transparent;
+      width: 5rem;
+      height: 8rem;
+      margin-left: -5rem;
+      z-index: 15;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: $medium) {
+        grid-column: 5/-1;
+        margin-left: 3rem;
+      }
+
+      @media only screen and (max-width: $small) {
+        grid-column: 5/-1;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &-right-track:hover ~ .slider &-track {
+    animation: scroll-right 40s linear infinite;
+    animation-play-state: running;
+  }
+
+  &-track {
+    grid-column: 2/3;
+    display: flex;
+    width: 335rem;
+    transform: translateX(-75rem);
+    animation: scroll 40s linear infinite;
+    animation-play-state: paused;
+
+    @media only screen and (max-width: $medium) {
+      animation-play-state: running;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+
+    &-container {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: min-content 1fr min-content;
+      align-items: center;
+      box-sizing: border-box;
+      position: relative;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    &-slide {
+      height: 12rem;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      position: relative;
+      object-fit: cover;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 1rem;
+      }
+
+      &-overlay {
+        opacity: 0;
+        transition: all 0.5s ease;
+      }
+
+      &:hover > &-overlay {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 10;
+        text-align: center;
+        height: 20rem;
+        opacity: 0.7;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  // 0% {
+  //   transform: translateX(0);
+  // }
+  // 100% {
+  //   transform: translateX(-100%);
+  // }
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-75rem);
+  }
+  100% {
+    // transform: translateX(calc(25rem * 13));
+    // transform: translateX(100%);
+    margin-left: 2125px;
+  }
+}
