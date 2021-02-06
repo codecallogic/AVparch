@@ -1,7 +1,15 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
+import { useRouter } from 'next/router'
 
 const Home = ({}) => {
+
+  const router = useRouter()
+  
+  const goToProject = (e) => {
+    if(e.target.textContent.toLowerCase() == 'view projects') router.push(`/project-page`)
+    if(e.target.textContent.toLowerCase() == 'view portfolio') router.push(`/project-page`)
+  }
   
   return (
     <>
@@ -10,7 +18,7 @@ const Home = ({}) => {
       <div className="header-container">
         <h1 className="header-title">ARTHUR<span>PRISTUPA</span></h1>
         <div className="header-button-container">
-          <button className="header-button">View Projects</button>
+          <button className="header-button" onClick={goToProject}>View Projects</button>
         </div>
         <h2 className="header-subheading">
           <span>Architecture struck me right <b>in between</b> the eye and the eyeball</span>
@@ -78,7 +86,9 @@ const Home = ({}) => {
     </div>
     <div className="description">
       <div className="description-line-right-2"></div>
-      <div className="description-button-container"><button className="description-button">View Portfolio</button></div>
+      <div className="description-button-container">
+          <button className="description-button" onClick={goToProject}>View Portfolio</button>
+      </div>
       <div className="description-line-left"></div>
     </div>
     <div className="white-space-bottom-large"></div>

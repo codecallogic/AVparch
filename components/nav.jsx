@@ -17,6 +17,7 @@ const Nav = ({}) => {
   
   useEffect( () => {
     if(router.pathname.substr(1,) == 'project-page') setActive('architectural design');
+    if(router.pathname.substr(1,) == 'artwork') setActive('studio art');
     if(router.query.id) setActive('project')
   }, [])
   
@@ -51,12 +52,11 @@ const Nav = ({}) => {
               <div className="nav-mobile-background">&nbsp;</div>
               <nav className="nav-mobile-nav">
                 <ul className="nav-mobile-list">
-                  <li className="nav-mobile-list-item"><a href="#" className={`nav-mobile-list-link` + (active === 'home' ? ' active' : '')} onClick={runNav}>Home</a></li>
-                  <li className="nav-mobile-list-item"><a href="#" className={`nav-mobile-list-link` + (active === 'architecture' ? ' active' : '')} onClick={runNav}>Architectural Design</a></li>
-                  <li className="nav-mobile-list-item"><a href="/#gallery" className={`nav-mobile-list-link` + (active === 'art' ? ' active' : '')} onClick={runNav}>Art</a></li>
-                  <li className="nav-mobile-list-item"><a href="/sales-estimate" className={`nav-mobile-list-link` + (active === 'about' ? ' active' : '')} onClick={runNav}>About</a></li>
-                  <li className="nav-mobile-list-item"><a href="/#contact" className={`nav-mobile-list-link` + (active === 'cv' ? ' active' : '')} onClick={runNav}>CV</a></li>
-                  <li className="nav-mobile-list-item"><a href="/#download" className='nav-mobile-list-link' onClick={runNav}>Download</a></li>
+                  <li className="nav-mobile-list-item"><a className={`nav-mobile-list-link` + (active === 'home' ? ' active' : '')} onClick={runNav}>Home</a></li>
+                  <li className="nav-mobile-list-item"><a className={`nav-mobile-list-link` + (active === 'architectural design' ? ' active' : '')} onClick={runNav}>Architectural Design</a></li>
+                  <li className="nav-mobile-list-item"><a className={`nav-mobile-list-link` + (active === 'studio art' ? ' active' : '')} onClick={runNav}>Studio Art</a></li>
+                  <li className="nav-mobile-list-item"><a className={`nav-mobile-list-link` + (active === 'about' ? ' active' : '')} onClick={runNav}>About</a></li>
+                  <li className="nav-mobile-list-item"><a className={`nav-mobile-list-link` + (active === 'cv' ? ' active' : '')} onClick={runNav}>CV</a></li>
                 </ul>
               </nav>
             </div>

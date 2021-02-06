@@ -1,0 +1,55 @@
+.artwork {
+  grid-column: 3/15;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  animation: fadeIn 3s ease forwards;
+
+  @media only screen and (max-width: $medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: $small) {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+    text-align: center;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    padding: 10rem 0;
+  }
+
+  &-item {
+    img {
+      object-fit: cover;
+      width: 80%;
+      height: 100%;
+      border: 0.5rem solid #6d6c6c;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      image-rendering: high-quality;
+    }
+
+    @media only screen and (max-width: $small) {
+      width: 100%;
+    }
+  }
+
+  &-showMore {
+    padding: 3rem 0;
+    font-size: 1.4rem;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-container {
+      grid-column: 3/15;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

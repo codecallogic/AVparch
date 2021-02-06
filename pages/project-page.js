@@ -8,7 +8,7 @@ const Projects = ({}) => {
   const router = useRouter()
   const makeEven = () => {
     let numberOfImages = images.length/2
-    Math.abs(images.length % 2) == 1 ? numberOfImages = numberOfImages + 1 : numberOfImages
+    Math.round((images.length/2) % 2) == 1 ? numberOfImages = numberOfImages + 1 : numberOfImages
     return numberOfImages
   }
   const [images, setImages] = useState(imageFiles[0])
@@ -21,6 +21,9 @@ const Projects = ({}) => {
   const goToProject = (e) => {
     router.push(`/` + (e.target.id))
   }
+
+  useEffect( () => {
+  })
   
   return (
     <>

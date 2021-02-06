@@ -3,6 +3,7 @@
   height: 100%;
   margin-top: 5rem;
   background-color: #f1f1f1;
+  animation: fadeIn 3s ease forwards;
 
   &-title {
     grid-column: 2/3;
@@ -26,6 +27,7 @@
 .project-description {
   grid-column: 2/3;
   padding: 2rem 0;
+  animation: fadeIn 3s ease forwards;
 
   &-container {
     display: grid;

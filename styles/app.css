@@ -43,10 +43,17 @@ body {
   margin-bottom: 25rem;
   z-index: 1; }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .header {
   display: grid;
   grid-template-columns: 1fr [center-start] 20rem [center-end] 1fr;
-  justify-content: center; }
+  justify-content: center;
+  animation: fadeIn 3s ease forwards; }
   .header-container {
     grid-column: 2/3;
     display: grid;
@@ -116,7 +123,8 @@ body {
 
 .description {
   display: grid;
-  grid-template-columns: 1fr 80rem 1fr; }
+  grid-template-columns: 1fr 80rem 1fr;
+  animation: fadeIn 3s ease forwards; }
   @media only screen and (max-width: 736px) {
     .description {
       grid-template-columns: 1fr; } }
@@ -210,7 +218,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 12.5rem;
-  font-size: 2rem; }
+  font-size: 2rem;
+  animation: fadeIn 3s ease forwards; }
   @media only screen and (max-width: 1024px) {
     .projects {
       grid-template-columns: repeat(2, 1fr); } }
@@ -269,6 +278,46 @@ body {
     .projects-description span {
       font-weight: 600; }
 
+.artwork {
+  grid-column: 3/15;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  animation: fadeIn 3s ease forwards; }
+  @media only screen and (max-width: 736px) {
+    .artwork {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 568px) {
+    .artwork {
+      grid-template-columns: 1fr;
+      grid-gap: 3rem;
+      text-align: center; } }
+  .artwork-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    padding: 10rem 0; }
+  .artwork-item img {
+    object-fit: cover;
+    width: 80%;
+    height: 100%;
+    border: 0.5rem solid #6d6c6c;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality; }
+  @media only screen and (max-width: 568px) {
+    .artwork-item {
+      width: 100%; } }
+  .artwork-showMore {
+    padding: 3rem 0;
+    font-size: 1.4rem;
+    text-decoration: underline; }
+    .artwork-showMore:hover {
+      cursor: pointer; }
+    .artwork-showMore-container {
+      grid-column: 3/15;
+      display: flex;
+      justify-content: center; }
+
 .nav {
   display: grid;
   grid-template-columns: repeat(10, 1fr); }
@@ -289,6 +338,7 @@ body {
     padding: 0;
     color: var(--color-dark-gray-2);
     text-shadow: 0 0.1rem 0.3rem var(--color-dark-gray-2);
+    animation: fadeIn 3s ease forwards;
     position: relative; }
     @media only screen and (max-width: 1024px) {
       .nav-current {
@@ -441,6 +491,9 @@ body {
       font-size: 1.2rem;
       padding: 1rem 5rem;
       margin: 1rem 5rem 0 0; }
+      @media only screen and (max-width: 736px) {
+        .nav-mobile-container {
+          margin: 1rem 2rem 0 0; } }
     .nav-mobile-checkbox {
       display: none; }
     .nav-mobile-checkbox:checked ~ .nav-mobile-background {
@@ -521,7 +574,7 @@ body {
       display: none; }
       .nav-mobile-list-item {
         margin: 2rem; }
-      .nav-mobile-list-link:link, .nav-mobile-list-link:visited {
+      .nav-mobile-list-link {
         display: inline-block;
         font-size: 1.4rem;
         font-weight: 300;
@@ -532,10 +585,11 @@ body {
         background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-dark-gray) 50%);
         background-size: 250%;
         transition: all 0.4s; }
-      .nav-mobile-list-link:hover, .nav-mobile-list-link:active {
-        background-position: 100%;
-        color: white;
-        transform: translateX(1rem); }
+        .nav-mobile-list-link:hover {
+          cursor: pointer;
+          background-position: 100%;
+          color: white;
+          transform: translateX(1rem); }
 
 .slider {
   grid-column: 3/4;
@@ -544,7 +598,8 @@ body {
   margin: auto;
   position: relative;
   display: grid;
-  width: 100% !important; }
+  width: 100% !important;
+  animation: fadeIn 3s ease forwards; }
   @media only screen and (max-width: 736px) {
     .slider {
       grid-column: 1/-1; } }
@@ -762,7 +817,8 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 5rem;
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  animation: fadeIn 3s ease forwards; }
   .carousel-title {
     grid-column: 2/3;
     font-size: 3.5rem;
@@ -779,7 +835,8 @@ body {
 
 .project-description {
   grid-column: 2/3;
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  animation: fadeIn 3s ease forwards; }
   .project-description-container {
     display: grid;
     grid-template-columns: 25% 50% 25%;
