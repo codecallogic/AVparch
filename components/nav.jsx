@@ -12,18 +12,22 @@ const Nav = ({}) => {
     if(e.target.textContent.toLowerCase() == 'home') router.push('/')
     if(e.target.textContent.toLowerCase() == 'architectural design') router.push('/project-page')
     if(e.target.textContent.toLowerCase() == 'studio art') router.push('/artwork')
+    if(e.target.textContent.toLowerCase() == 'about') router.push('/about')
+    if(e.target.textContent.toLowerCase() == 'cv') router.push('/cv')
     setActive(e.target.textContent.toLowerCase())
   }
   
   useEffect( () => {
     if(router.pathname.substr(1,) == 'project-page') setActive('architectural design');
     if(router.pathname.substr(1,) == 'artwork') setActive('studio art');
+    if(router.pathname.substr(1,) == 'about') setActive('about');
+    if(router.pathname.substr(1,) == 'cv') setActive('cv');
     if(router.query.id) setActive('project')
   }, [])
   
   return (
     <div className="nav">
-      {active !== 'home' ? <div className="nav-current-container">
+      {active !== 'home' && active !== 'about' && active !== 'cv'? <div className="nav-current-container">
         <div className="nav-current"><span></span>{active}</div>
       </div>
       : null }
@@ -37,8 +41,8 @@ const Nav = ({}) => {
                 <li className="nav-menu-link-dropdown-sub"><a onClick={runNav}>Studio Art</a></li>
               </ul>
             </a>
-            <a href="#" className="nav-menu-link">About</a>
-            <a href="#" className="nav-menu-link">CV</a>
+            <a className={`nav-menu-link ` + (active == 'about' ? 'active': null)} onClick={runNav}>About</a>
+            <a className={`nav-menu-link ` + (active == 'cv' ? 'active': null)} onClick={runNav}>CV</a>
           </div>
         </div>
         <div className="nav-mobile">

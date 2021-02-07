@@ -1,0 +1,151 @@
+.about {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  padding: 10rem 0;
+
+  @media only screen and (max-width: $medium) {
+    grid-template-columns: 1fr;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+  }
+
+  &-arthur {
+    img {
+      margin: 2rem 0;
+      width: 16rem;
+      height: 16rem;
+      object-fit: cover;
+      border-radius: 50%;
+      filter: brightness(1.4);
+      box-shadow: -0.25rem 0.2rem 2rem 0.2rem rgba(0, 0, 0, 0.3);
+      border: 0.5rem solid white;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      image-rendering: high-quality;
+    }
+
+    &-heading {
+      font-size: 5rem;
+      font-weight: 200;
+      text-transform: uppercase;
+      color: black;
+    }
+
+    &-description {
+      padding: 2rem 0;
+      font-size: 1.4rem;
+    }
+
+    &-subheading {
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+  }
+
+  &-contact {
+    &-heading {
+      font-size: 5rem;
+      font-weight: 200;
+      text-transform: uppercase;
+      color: black;
+    }
+
+    &-info {
+      display: grid;
+      font-size: 1.4rem;
+      padding: 2rem 0;
+    }
+
+    &-form {
+      &-heading {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 100;
+      }
+
+      &-container {
+        display: flex;
+        padding: 0.5rem;
+
+        @media only screen and (max-width: $large) {
+          flex-direction: column;
+        }
+      }
+
+      &-inputs {
+        width: 30%;
+
+        @media only screen and (max-width: $large) {
+          width: 100%;
+        }
+
+        input {
+          width: 100%;
+          height: 4rem;
+          margin-bottom: 0.5rem;
+          &::placeholder {
+            text-indent: 1rem;
+          }
+
+          &:focus {
+            text-indent: 1rem;
+          }
+        }
+      }
+
+      &-message {
+        resize: none;
+        width: 20rem !important;
+        height: 17.5rem !important;
+        margin-left: 0.5rem !important;
+        padding: 1rem;
+
+        &::placeholder {
+          text-indent: 1rem;
+        }
+
+        &:focus {
+          text-indent: 1rem;
+        }
+
+        @media only screen and (max-width: $large) {
+          width: 100% !important;
+        }
+      }
+
+      &-button {
+        margin-left: 1rem;
+        outline: none;
+        border: none;
+        padding: 1rem 1rem;
+        background-color: black;
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-icons {
+      display: flex;
+      padding: 6rem 2rem;
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 2rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

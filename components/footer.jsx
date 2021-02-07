@@ -11,6 +11,8 @@ const Footer = ({}) => {
     if(e.target.textContent.toLowerCase() == 'home') router.push('/')
     if(e.target.textContent.toLowerCase() == 'architectural design') router.push('/project-page')
     if(e.target.textContent.toLowerCase() == 'studio art') router.push('/artwork')
+    if(e.target.textContent.toLowerCase() == 'about') router.push('/about')
+    if(e.target.textContent.toLowerCase() == 'cv') router.push('/cv')
     setActive(e.target.textContent.toLowerCase())
   }
   
@@ -26,8 +28,8 @@ const Footer = ({}) => {
                   <li className="footer-nav-menu-link-dropdown-sub"><a onClick={runNav}>Architectural Design</a></li>
                 </ul>
               </a>
-              <a className="footer-nav-menu-link">About</a>
-              <a className="footer-nav-menu-link">CV</a>
+              <a className="footer-nav-menu-link" onClick={runNav}>About</a>
+              <a className="footer-nav-menu-link" onClick={runNav}>CV</a>
           </div>
         </div>
       </div>
