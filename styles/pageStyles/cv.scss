@@ -7,6 +7,15 @@
     display: grid;
     grid-template-columns: 30% 40% 30%;
     justify-content: center;
+
+    @media only screen and (max-width: $large) {
+      grid-template-columns: 20% 60% 20%;
+    }
+
+    @media only screen and (max-width: $small) {
+      grid-template-columns: 1fr;
+      padding: 0 3rem;
+    }
   }
 
   &-heading {
@@ -31,6 +40,11 @@
   &-summary {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    @media only screen and (max-width: $small) {
+      grid-template-columns: 1fr;
+    }
 
     &-skills {
       // display: grid;
@@ -61,6 +75,32 @@
 
     &-description {
       font-size: 1.4rem;
+    }
+
+    &-resume {
+      display: flex;
+      padding: 2rem 0;
+
+      img {
+        width: 50%;
+        height: 100%;
+      }
+
+      &-download {
+        font-size: 1.6rem;
+        color: var(--color-dark-gray);
+        text-decoration: none;
+        padding: 1rem 2rem;
+        background-color: white;
+        border: 0.1rem solid var(--color-dark-gray);
+        transition: all 1s;
+
+        &:hover {
+          cursor: pointer;
+          color: white;
+          background-color: var(--color-light-green);
+        }
+      }
     }
   }
 }

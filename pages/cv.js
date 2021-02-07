@@ -73,6 +73,20 @@ const CV = ({}) => {
                 <span className="cv-summary-subheading">Office Programs​</span>
                 <span className="cv-summary-description">Access, Excel, Word, PowerPoint, Outlook</span>
               </div>
+              <div className="cv-summary-skills-group">
+                <span className="cv-summary-subheading">Languages​</span>
+                <span className="cv-summary-description">Fluent in Ukrainian and English</span>
+              </div>
+              <div className="cv-summary-skills-group">
+                <span className="cv-summary-subheading">Affiliations​</span>
+                <span className="cv-summary-description">PRINTS Architecture & Design Club CSU</span>
+                <span className="cv-summary-description">AIA, IIDA, NCARB</span>
+              </div>
+              <div className="cv-summary-resume">
+                <img src="/media/ArthurPristupaResume.png" alt="Resume"/>
+                <img src="/media/Arthur Pristupa Resume-2.png" alt="Resume"/>
+              </div>
+              <a className="cv-summary-resume-download" href='/media/Arthur Pristupa Resume.pdf' download>Download</a>
             </div>
           </div>
         </div>

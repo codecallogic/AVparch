@@ -426,6 +426,13 @@ body {
     display: grid;
     grid-template-columns: 30% 40% 30%;
     justify-content: center; }
+    @media only screen and (max-width: 1024px) {
+      .cv-container {
+        grid-template-columns: 20% 60% 20%; } }
+    @media only screen and (max-width: 568px) {
+      .cv-container {
+        grid-template-columns: 1fr;
+        padding: 0 3rem; } }
   .cv-heading {
     font-size: 5rem;
     color: black;
@@ -441,7 +448,11 @@ body {
       font-size: 2.4rem; }
   .cv-summary {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); }
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem; }
+    @media only screen and (max-width: 568px) {
+      .cv-summary {
+        grid-template-columns: 1fr; } }
     .cv-summary-skills-group {
       display: grid;
       padding: 1rem 0; }
@@ -457,6 +468,24 @@ body {
       font-size: 1.8rem; }
     .cv-summary-description {
       font-size: 1.4rem; }
+    .cv-summary-resume {
+      display: flex;
+      padding: 2rem 0; }
+      .cv-summary-resume img {
+        width: 50%;
+        height: 100%; }
+      .cv-summary-resume-download {
+        font-size: 1.6rem;
+        color: var(--color-dark-gray);
+        text-decoration: none;
+        padding: 1rem 2rem;
+        background-color: white;
+        border: 0.1rem solid var(--color-dark-gray);
+        transition: all 1s; }
+        .cv-summary-resume-download:hover {
+          cursor: pointer;
+          color: white;
+          background-color: var(--color-light-green); }
 
 .nav {
   display: grid;
