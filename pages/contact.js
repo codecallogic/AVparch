@@ -1,7 +1,7 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 
-const About = ({}) => {
+const Contact = ({}) => {
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -13,9 +13,9 @@ const About = ({}) => {
       <div className="about-container">
         <div className="about">
           <div className="about-arthur">
-            <h1 className="about-arthur-heading">About</h1>
+            <h1 className="about-arthur-heading">Arthur Pristupa | Owner</h1>
             <img src="/media/462C3150-F8BF-48F3-BB6E-C34CC3182F93.JPG.jpg" alt="Arthur Pristupa" className="about-arthur-picture"/>
-            <div className="about-arthur-description">Currently an Architectural Designer in Sacramento, California. Arthur is very enthusiastic about design, whether it's in the graphics, interiors, or architecture and has had a wide variety of experience in the design field. Within the next few years, he hopes to obtain a license in Architecture.</div>
+            <div className="about-arthur-description">AVP Architecture began in 2017 with a desire to bring clients ideas and projects to life. From small to larger type work, each is unique with its needs and challenges. We hope to make the process smooth and understandable for you, whether it’s just a few renderings to pitch an idea or a full house plan permit set, be confident that your project will be in the right hands.</div>
             <h2 className="about-arthur-subheading">Lets work together</h2>
           </div>
           <div className="about-contact">
@@ -25,6 +25,7 @@ const About = ({}) => {
               <span>arthurpristupa@gmail.com</span>
               <span>Tel. 209.813.0257</span>
             </div>
+            <br/>
             <form action="POST" className="about-contact-form" onSubmit={sendEmail}>
               <h3 className="about-contact-form-heading">Inquiries? Send a message below</h3>
               <div className="about-contact-form-container">
@@ -38,6 +39,7 @@ const About = ({}) => {
               </div>
               <button className="about-contact-form-button">Send</button>
             </form>
+            
             <div className="about-contact-icons">
               <a href="https://www.linkedin.com/in/arthur-pristupa-0037a9b6/" target="_blank"><svg>
                 <use xlinkHref="/sprite.svg#icon-linkedin-with-circle"></use>
@@ -57,4 +59,4 @@ const About = ({}) => {
   )
 }
 
-export default About
+export default Contact

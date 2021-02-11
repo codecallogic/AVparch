@@ -16,7 +16,7 @@ const Home = ({}) => {
     <Nav></Nav>
     <div className="header">
       <div className="header-container">
-        <h1 className="header-title">ARTHUR<span>PRISTUPA</span></h1>
+        <h1 className="header-title">AVP<span>ARCHITECTURE</span></h1>
         <div className="header-button-container">
           <button className="header-button" onClick={goToProject}>View Projects</button>
         </div>
@@ -70,7 +70,7 @@ const Home = ({}) => {
       <div className="description-line"></div>
       <h1 className="description-heading">
         <span>Sacramento | San Francisco</span>
-        <span>Specializing in freelancing architecture, graphic design, and 3D visual rendering type work. <span>&#x2b;</span></span>
+        <span>Specializing in residential design, building permits, plan sets, graphic design, and 3D visual rendering type work. <span>&#x2b;</span></span>
       </h1>
       <div></div>
     </div>
@@ -87,7 +87,7 @@ const Home = ({}) => {
     <div className="description">
       <div className="description-line-right-2"></div>
       <div className="description-button-container">
-          <button className="description-button" onClick={goToProject}>View Portfolio</button>
+          <button className="description-button" onClick={goToProject}>View Projects</button>
       </div>
       <div className="description-line-left"></div>
     </div>

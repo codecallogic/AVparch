@@ -62,7 +62,9 @@ body {
     grid-column: 1/-1;
     margin-top: 10rem;
     font-size: 3.6rem;
-    color: var(--color-dark-blue); }
+    color: var(--color-dark-blue);
+    border: 0.1rem solid var(--color-dark-green);
+    padding: 1rem 2rem; }
     .header-title span {
       font-weight: 100; }
   .header-subheading {
@@ -322,14 +324,14 @@ body {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+  grid-gap: 15rem;
   padding: 10rem 0; }
   @media only screen and (max-width: 736px) {
     .about {
       grid-template-columns: 1fr; } }
   .about-container {
     display: grid;
-    grid-template-columns: 20% 60% 20%; }
+    grid-template-columns: 15% 70% 15%; }
   .about-arthur img {
     margin: 2rem 0;
     width: 16rem;
@@ -343,7 +345,9 @@ body {
     image-rendering: crisp-edges;
     image-rendering: high-quality; }
   .about-arthur-heading {
-    font-size: 5rem;
+    display: flex;
+    width: 100%;
+    font-size: 4rem;
     font-weight: 200;
     text-transform: uppercase;
     color: black; }
@@ -355,7 +359,7 @@ body {
     text-transform: uppercase;
     font-weight: 200; }
   .about-contact-heading {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 200;
     text-transform: uppercase;
     color: black; }
@@ -392,6 +396,9 @@ body {
     height: 17.5rem !important;
     margin-left: 0.5rem !important;
     padding: 1rem; }
+    @media only screen and (max-width: 568px) {
+      .about-contact-form-message {
+        margin-left: 0 !important; } }
     .about-contact-form-message::placeholder {
       text-indent: 1rem; }
     .about-contact-form-message:focus {
@@ -418,63 +425,63 @@ body {
       .about-contact-icons svg:hover {
         cursor: pointer; }
 
-.cv {
+.services {
   grid-column: 2/3;
-  padding: 5rem 0;
+  padding: 10rem 0 20rem 0;
   color: black; }
-  .cv-container {
+  .services-container {
     display: grid;
     grid-template-columns: 30% 40% 30%;
     justify-content: center; }
     @media only screen and (max-width: 1024px) {
-      .cv-container {
+      .services-container {
         grid-template-columns: 20% 60% 20%; } }
     @media only screen and (max-width: 568px) {
-      .cv-container {
+      .services-container {
         grid-template-columns: 1fr;
         padding: 0 3rem; } }
-  .cv-heading {
+  .services-heading {
     font-size: 5rem;
     color: black;
     font-weight: 100; }
-  .cv-person {
+  .services-person {
     display: grid;
     justify-content: center;
     align-items: center;
     padding: 5rem 0;
     font-size: 1.6rem;
     border-bottom: 0.1rem solid black; }
-    .cv-person-subheading {
+    .services-person-subheading {
       font-size: 2.4rem; }
-  .cv-summary {
+  .services-summary {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem; }
+    grid-gap: 3rem; }
     @media only screen and (max-width: 568px) {
-      .cv-summary {
+      .services-summary {
         grid-template-columns: 1fr; } }
-    .cv-summary-skills-group {
+    .services-summary-skills-group {
       display: grid;
       padding: 1rem 0; }
-    .cv-summary-experience {
+    .services-summary-experience {
       display: grid; }
-      .cv-summary-experience-group {
+      .services-summary-experience-group {
         display: grid;
         padding: 1rem 0; }
-    .cv-summary-heading {
+    .services-summary-heading {
       font-size: 2.4rem;
-      padding: 2rem 0; }
-    .cv-summary-subheading {
+      padding: 1rem 0; }
+    .services-summary-subheading {
       font-size: 1.8rem; }
-    .cv-summary-description {
+    .services-summary-description {
       font-size: 1.4rem; }
-    .cv-summary-resume {
+    .services-summary-resume {
       display: flex;
       padding: 2rem 0; }
-      .cv-summary-resume img {
+      .services-summary-resume img {
         width: 50%;
         height: 100%; }
-      .cv-summary-resume-download {
+      .services-summary-resume-download {
         font-size: 1.6rem;
         color: var(--color-dark-gray);
         text-decoration: none;
@@ -482,7 +489,7 @@ body {
         background-color: white;
         border: 0.1rem solid var(--color-dark-gray);
         transition: all 1s; }
-        .cv-summary-resume-download:hover {
+        .services-summary-resume-download:hover {
           cursor: pointer;
           color: white;
           background-color: var(--color-light-green); }
@@ -559,8 +566,8 @@ body {
       width: 100%;
       height: 100%;
       top: 0;
-      border-left: 0.3rem solid orangered;
-      border-right: 0.3rem solid #fdc518;
+      border-left: 0.3rem solid var(--color-light-green);
+      border-right: 0.3rem solid var(--color-light-green);
       transition: all 1s cubic-bezier(0.81, 0.13, 0.93, 1.21); }
     .nav-menu:hover:before {
       transform: rotateY(180deg); }
@@ -576,7 +583,7 @@ body {
       display: flex;
       justify-content: space-evenly;
       height: 5rem;
-      padding: 0 0.3rem; }
+      padding: 0 0.2rem; }
     .nav-menu-link {
       color: var(--color-dark-gray);
       padding: 0.5rem 0;
