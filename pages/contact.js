@@ -1,10 +1,33 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
+import {API} from '../config'
 
 const Contact = ({}) => {
 
-  const sendEmail = (e) => {
+  const [form, setEmail] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  })
+
+  const {name, email, phone, subject, message} = form
+  
+  const sendEmail = async (e) => {
     e.preventDefault()
+    try {
+      const response = await axios.post(`${API}/email`, form)
+      console.log(response)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const handleChange = (e) => {
+    setEmail({...form, [e.target.name]: e.target.value})
   }
   
   return (
@@ -30,14 +53,14 @@ const Contact = ({}) => {
               <h3 className="about-contact-form-heading">Inquiries? Send a message below</h3>
               <div className="about-contact-form-container">
                 <div className="about-contact-form-inputs">
-                  <input type="text" name="name" placeholder="Name *"/>
-                  <input type="email" name="email" placeholder="Email *"/>
-                  <input type="phone" name="phone" placeholder="Phone"/>
-                  <input type="subject" name="subject" placeholder="Subject"/>
+                  <input type="text" name="name" placeholder="Name *" value={name} onChange={handleChange}/>
+                  <input type="email" name="email" placeholder="Email *" value={email} onChange={handleChange}/>
+                  <input type="phone" name="phone" placeholder="Phone" value={phone} onChange={handleChange}/>
+                  <input type="subject" name="subject" placeholder="Subject" value={subject} onChange={handleChange}/>
                 </div>
-                <textarea className="about-contact-form-message" placeholder="Message"></textarea>
+                <textarea className="about-contact-form-message" placeholder="Message" name="message" value={message} onChange={handleChange}></textarea>
               </div>
-              <button className="about-contact-form-button">Send</button>
+              <button type="submit" className="about-contact-form-button">Send</button>
             </form>
             
             <div className="about-contact-icons">
