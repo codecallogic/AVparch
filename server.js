@@ -31,10 +31,10 @@ app.use('/api/email', async (req, res) => {
 
   sendEmail.then( data => {
     console.log('Email submitted on SES', data)
-    return res.json(`Thank you for contacting use, we'll back to you as soon as we can`)
+    return res.json(`Thank you for contacting us, we'll back to you as soon as we can`)
   }).catch( err => {
     console.log(err)
-    return res.status(400).json({error: 'We could not verify your email, please try again'})
+    return res.status(400).json('We could not verify your email, please try again')
   })
   
 })

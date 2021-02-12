@@ -415,6 +415,10 @@ body {
     color: white; }
     .about-contact-form-button:hover {
       cursor: pointer; }
+  .about-contact-form-notification {
+    display: block;
+    padding: 1rem 1rem 0 1rem;
+    font-size: 1.4rem; }
   .about-contact-icons {
     display: flex;
     padding: 6rem 2rem; }

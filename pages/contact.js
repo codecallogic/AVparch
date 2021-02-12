@@ -14,15 +14,19 @@ const Contact = ({}) => {
     message: ''
   })
 
+  const [notifications, setNotifications] = useState(null)
+  
   const {name, email, phone, subject, message} = form
   
   const sendEmail = async (e) => {
     e.preventDefault()
     try {
       const response = await axios.post(`${API}/email`, form)
-      console.log(response)
+      setEmail({...form, name: '', email: '', phone: '', subject: '', message: ''})
+      setNotifications(response.data)
     } catch (error) {
-      console.log(error)
+      setEmail({...form, name: '', email: '', phone: '', subject: '', message: ''})
+      setNotifications(error.response.data)
     }
   }
 
@@ -61,6 +65,8 @@ const Contact = ({}) => {
                 <textarea className="about-contact-form-message" placeholder="Message" name="message" value={message} onChange={handleChange}></textarea>
               </div>
               <button type="submit" className="about-contact-form-button">Send</button>
+              { notifications !== null && <span className="about-contact-form-notification">{notifications}</span>
+              }
             </form>
             
             <div className="about-contact-icons">
