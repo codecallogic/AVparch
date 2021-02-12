@@ -5,6 +5,8 @@ const aws = require('aws-sdk')
 const {contactEmail} = require('./templates/email')
 require('dotenv').config();
 
+// ssh -i "ArthurPristupa.pem" ubuntu@ec2-54-219-40-114.us-west-1.compute.amazonaws.com
+
 const app = express()
 
 aws.config.update({
