@@ -25,8 +25,10 @@ const Contact = ({}) => {
       setEmail({...form, name: '', email: '', phone: '', subject: '', message: ''})
       setNotifications(response.data)
     } catch (error) {
+      if(error.response.status == 400){
       setEmail({...form, name: '', email: '', phone: '', subject: '', message: ''})
       setNotifications(error.response.data)
+      }
     }
   }
 

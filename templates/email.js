@@ -2,7 +2,7 @@ exports.contactEmail = (name, email, phone, subject, message) => {
   return {
     Source: `Client <${email}>`, 
     Destination: { 
-      ToAddresses: ['codecallogic@gmail.com']
+      ToAddresses: [process.env.BUSINESS_EMAIL]
     },
     Message: {
       Subject: {
