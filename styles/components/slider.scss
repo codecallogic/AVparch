@@ -7,6 +7,7 @@
   display: grid;
   width: 100% !important;
   animation: fadeIn 3s ease forwards;
+  transform: translate3d(0, 0, 0);
 
   @media only screen and (max-width: $medium) {
     grid-column: 1/-1;
@@ -55,7 +56,7 @@
   }
 
   &-left-track:hover ~ .slider &-track {
-    animation-play-state: running;
+    // animation-play-state: running;
   }
 
   &-right {
@@ -97,25 +98,26 @@
   }
 
   &-right-track:hover ~ .slider &-track {
-    animation: scroll-right 40s linear infinite;
-    animation-play-state: running;
+    // animation: scroll-right 40s linear infinite forwards;
+    // animation-play-state: running;
   }
 
   &-track {
     grid-column: 2/3;
     display: flex;
     width: 335rem;
-    transform: translateX(-75rem);
-    animation: scroll 40s linear infinite;
-    animation-play-state: paused;
+    position: absolute;
+    // left: -75rem;
+    // animation: scroll 40s linear infinite forwards;
+    // animation-play-state: paused;
 
-    @media only screen and (max-width: $medium) {
-      animation-play-state: running;
+    // @media only screen and (max-width: $medium) {
+    //   animation-play-state: running;
 
-      &:hover {
-        animation-play-state: paused;
-      }
-    }
+    //   &:hover {
+    //     animation-play-state: paused;
+    //   }
+    // }
 
     &-container {
       max-width: 100%;
@@ -181,7 +183,7 @@
 
 @keyframes scroll-right {
   0% {
-    transform: translateX(-75rem);
+    margin-left: 0;
   }
   100% {
     // transform: translateX(calc(25rem * 13));
