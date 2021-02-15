@@ -61,7 +61,7 @@ const Home = ({}) => {
       <div className="slider">
         <div className="slider-track-container">
             <div className="slider-track" style={{left: sliderPosition}}>
-              <div className="slider-track-slide" onClick={() => goToProject('container refuge | D.D')}><img src="/media/slider/slider-8.jpg" alt=""/><span className="slider-track-slide-overlay"></span></div>
+              <div className="slider-track-slide" onClick={() => goToProject('container refuge | D.D')}><img src="/media/slider/slider-8.png" alt=""/><span className="slider-track-slide-overlay"></span></div>
               <div className="slider-track-slide" onClick={() => goToProject('parking garage | s.d | ca')}><img src="/media/slider/slider-9.png" alt=""/><span className="slider-track-slide-overlay"></span></div>
               <div className="slider-track-slide" onClick={() => goToProject('marriot renovation | s.d | ca')}><img src="/media/slider/slider-10.png" alt=""/><span className="slider-track-slide-overlay"></span></div>
               <div className="slider-track-slide" onClick={() => goToProject('r st. condos | s.d | ca')}><img src="/media/slider/slider-11.png" alt=""/><span className="slider-track-slide-overlay"></span></div>
