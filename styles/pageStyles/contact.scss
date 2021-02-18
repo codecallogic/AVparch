@@ -32,7 +32,7 @@
     &-heading {
       display: flex;
       width: 100%;
-      font-size: 4rem;
+      font-size: 3.6rem;
       font-weight: 200;
       text-transform: uppercase;
       color: black;
@@ -52,7 +52,7 @@
 
   &-contact {
     &-heading {
-      font-size: 4rem;
+      font-size: 3.6rem;
       font-weight: 200;
       text-transform: uppercase;
       color: black;
@@ -73,7 +73,7 @@
 
       &-container {
         display: flex;
-        padding: 0.5rem;
+        padding: 0.5rem 0;
 
         @media only screen and (max-width: $large) {
           flex-direction: column;
@@ -126,7 +126,6 @@
       }
 
       &-button {
-        margin-left: 1rem;
         outline: none;
         border: none;
         padding: 1rem 1rem;

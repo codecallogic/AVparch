@@ -347,7 +347,7 @@ body {
   .about-arthur-heading {
     display: flex;
     width: 100%;
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight: 200;
     text-transform: uppercase;
     color: black; }
@@ -359,7 +359,7 @@ body {
     text-transform: uppercase;
     font-weight: 200; }
   .about-contact-heading {
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight: 200;
     text-transform: uppercase;
     color: black; }
@@ -373,7 +373,7 @@ body {
     font-weight: 100; }
   .about-contact-form-container {
     display: flex;
-    padding: 0.5rem; }
+    padding: 0.5rem 0; }
     @media only screen and (max-width: 1024px) {
       .about-contact-form-container {
         flex-direction: column; } }
@@ -407,7 +407,6 @@ body {
       .about-contact-form-message {
         width: 100% !important; } }
   .about-contact-form-button {
-    margin-left: 1rem;
     outline: none;
     border: none;
     padding: 1rem 1rem;
@@ -445,7 +444,7 @@ body {
         grid-template-columns: 1fr;
         padding: 0 3rem; } }
   .services-heading {
-    font-size: 5rem;
+    font-size: 4.2rem;
     color: black;
     font-weight: 100; }
   .services-person {
@@ -453,10 +452,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 5rem 0;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     border-bottom: 0.1rem solid black; }
     .services-person-subheading {
-      font-size: 2.4rem; }
+      font-size: 1.4rem; }
   .services-summary {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -473,12 +472,12 @@ body {
         display: grid;
         padding: 1rem 0; }
     .services-summary-heading {
-      font-size: 2.4rem;
+      font-size: 1.4rem;
       padding: 1rem 0; }
     .services-summary-subheading {
-      font-size: 1.8rem; }
-    .services-summary-description {
       font-size: 1.4rem; }
+    .services-summary-description {
+      font-size: 1.2rem; }
     .services-summary-resume {
       display: flex;
       padding: 2rem 0; }
@@ -486,7 +485,7 @@ body {
         width: 50%;
         height: 100%; }
       .services-summary-resume-download {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         color: var(--color-dark-gray);
         text-decoration: none;
         padding: 1rem 2rem;

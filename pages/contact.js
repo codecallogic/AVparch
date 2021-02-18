@@ -41,9 +41,9 @@ const Contact = ({}) => {
       <Nav></Nav>
       <div className="about-container">
         <div className="about">
-          <div className="about-arthur">
-            <h1 className="about-arthur-heading">Arthur Pristupa | Owner</h1>
+          <div className="about-arthur">            
             <img src="/media/462C3150-F8BF-48F3-BB6E-C34CC3182F93.JPG.jpg" alt="Arthur Pristupa" className="about-arthur-picture"/>
+            <h1 className="about-arthur-heading">Arthur Pristupa | Owner</h1>
             <div className="about-arthur-description">AVP Architecture began in 2017 with a desire to bring clients ideas and projects to life. From small to larger type work, each is unique with its needs and challenges. We hope to make the process smooth and understandable for you, whether it’s just a few renderings to pitch an idea or a full house plan permit set, be confident that your project will be in the right hands.</div>
             <h2 className="about-arthur-subheading">Lets work together</h2>
           </div>
@@ -51,7 +51,7 @@ const Contact = ({}) => {
             <h1 className="about-contact-heading">Contact</h1>
             <div className="about-contact-info">
               <span>Sacramento, CA 95843</span>
-              <span>arthurpristupa@gmail.com</span>
+              <span>arthur@avparch.com</span>
               <span>Tel. 209.813.0257</span>
             </div>
             <br/>
