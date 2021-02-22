@@ -347,7 +347,7 @@ body {
   .about-arthur-heading {
     display: flex;
     width: 100%;
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     font-weight: 200;
     text-transform: uppercase;
     color: black; }
@@ -355,7 +355,7 @@ body {
     padding: 2rem 0;
     font-size: 1.4rem; }
   .about-arthur-subheading {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: 200; }
   .about-contact-heading {
@@ -430,8 +430,15 @@ body {
 
 .services {
   grid-column: 2/3;
-  padding: 10rem 0 20rem 0;
+  padding: 10rem 0 30rem 0;
+  height: 100%;
   color: black; }
+  @media only screen and (max-width: 1920px) {
+    .services {
+      padding: 10rem 0 40rem 0; } }
+  @media only screen and (max-width: 736px) {
+    .services {
+      padding: 10rem 0 20rem 0; } }
   .services-container {
     display: grid;
     grid-template-columns: 30% 40% 30%;
@@ -464,20 +471,20 @@ body {
       .services-summary {
         grid-template-columns: 1fr; } }
     .services-summary-skills-group {
-      display: grid;
-      padding: 1rem 0; }
+      display: grid; }
     .services-summary-experience {
       display: grid; }
       .services-summary-experience-group {
-        display: grid;
-        padding: 1rem 0; }
+        display: grid; }
     .services-summary-heading {
       font-size: 1.4rem;
-      padding: 1rem 0; }
+      padding: 4rem 0;
+      font-weight: 800; }
     .services-summary-subheading {
       font-size: 1.4rem; }
     .services-summary-description {
-      font-size: 1.2rem; }
+      font-size: 1.4rem;
+      padding: 2rem 0; }
     .services-summary-resume {
       display: flex;
       padding: 2rem 0; }

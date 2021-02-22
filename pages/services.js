@@ -18,10 +18,7 @@ const Services = ({}) => {
             <div className="services-summary-experience">
               <div className="services-summary-experience-group">
                 <div className="services-summary-heading">Typical Plan Set:</div>
-                <span className="services-summary-subheading">Cover Page</span>
-              </div>
-              <div className="services-summary-experience-group">
-                <span className="services-summary-subheading">Site Plan</span>
+                <span className="services-summary-subheading">Cover Page/Site Plan</span>
               </div>
               <div className="services-summary-experience-group">
                 <span className="services-summary-subheading">Note/Standards</span>

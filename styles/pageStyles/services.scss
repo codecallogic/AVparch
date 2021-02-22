@@ -1,7 +1,16 @@
 .services {
   grid-column: 2/3;
-  padding: 10rem 0 20rem 0;
+  padding: 10rem 0 30rem 0;
+  height: 100%;
   color: black;
+
+  @media only screen and (max-width: $desktop) {
+    padding: 10rem 0 40rem 0;
+  }
+
+  @media only screen and (max-width: $medium) {
+    padding: 10rem 0 20rem 0;
+  }
 
   &-container {
     display: grid;
@@ -51,7 +60,7 @@
 
       &-group {
         display: grid;
-        padding: 1rem 0;
+        // padding: 1rem 0;
       }
     }
 
@@ -60,13 +69,14 @@
 
       &-group {
         display: grid;
-        padding: 1rem 0;
+        // padding: 1rem 0;
       }
     }
 
     &-heading {
       font-size: 1.4rem;
-      padding: 1rem 0;
+      padding: 4rem 0;
+      font-weight: 800;
     }
 
     &-subheading {
@@ -74,7 +84,8 @@
     }
 
     &-description {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      padding: 2rem 0;
     }
 
     &-resume {
