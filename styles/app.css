@@ -432,9 +432,9 @@ body {
   grid-column: 2/3;
   padding: 10rem 0 30rem 0;
   height: 100%; }
-  @media only screen and (max-width: 1920px) {
+  @media only screen and (min-width: 1920px) {
     .services {
-      padding: 10rem 0 40rem 0; } }
+      padding: 10rem 0 30rem 0; } }
   @media only screen and (max-width: 736px) {
     .services {
       padding: 10rem 0 20rem 0; } }
@@ -902,6 +902,11 @@ body {
   display: grid;
   grid-template-columns: 10% 80% 10%;
   background-color: var(--color-light-gray-2); }
+  @media only screen and (min-width: 1920px) {
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%; } }
   .footer-nav {
     grid-column: 2/3; }
     .footer-nav-menu {
