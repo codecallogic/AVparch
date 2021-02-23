@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
     <Head>
       <>
       <title>AVP Architecture</title>
-      <link rel="stylesheet" href="https://use.typekit.net/fwx5kic.css"></link>
+      <link rel="stylesheet" href="https://i.imgur.com/gDGDlfr.png"></link>
       <meta property="og:image" content="https://i.imgur.com/W2xHRle.png"/>
       <meta name="description" content="Specializing in residential design, building permits, plan sets, graphic design, and 3D visual rendering type work."></meta>
       {/* <link rel="stylesheet" href="https://use.typekit.net/fwx5kic.css"></link> */}
