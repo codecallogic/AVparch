@@ -8,7 +8,7 @@ const Services = ({}) => {
       <Nav></Nav>
       <div className="services-container">
         <div className="services">
-          <div className="services-heading">We offer:</div>
+          <div className="services-heading">Services</div>
           {/* <div className="services-person">
             <div className="services-person-subheading">Arthur Pristupa</div>
             <span className="services-person-subheading-2">Sacramento | San Francisco</span>
@@ -17,11 +17,11 @@ const Services = ({}) => {
           <div className="services-summary">
             <div className="services-summary-experience">
               <div className="services-summary-experience-group">
-                <div className="services-summary-heading">Typical Plan Set:</div>
+                <div className="services-summary-heading">Typical Plan Set</div>
                 <span className="services-summary-subheading">Cover Page/Site Plan</span>
               </div>
               <div className="services-summary-experience-group">
-                <span className="services-summary-subheading">Note/Standards</span>
+                <span className="services-summary-subheading">Notes/Standards</span>
               </div>
               <div className="services-summary-experience-group">
                 <span className="services-summary-subheading">Floor Plan (Existing/Proposed)</span>
@@ -44,7 +44,7 @@ const Services = ({}) => {
             </div>
             <div className="services-summary-skills">
               <div className="services-summary-skills-group">
-                <div className="services-summary-heading">Additional services:</div>
+                <div className="services-summary-heading">Additional Services</div>
                 <span className="services-summary-subheading">3D Rendering</span>
               </div>
               <div className="services-summary-skills-group">
