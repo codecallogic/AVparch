@@ -1,6 +1,6 @@
 exports.contactEmail = (name, email, phone, subject, message) => {
   return {
-    Source: `Client <${email}>`, 
+    Source: `Contact Form <arthurpristupa@gmail.com>`, 
     Destination: { 
       ToAddresses: [process.env.BUSINESS_EMAIL]
     },
